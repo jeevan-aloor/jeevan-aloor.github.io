@@ -1,0 +1,14 @@
+.bckimage{
+    /* background-image: url('https://i.makeagif.com/media/8-22-2017/tFTl2R.gif'); */
+    background-color:#3F3C44;
+    background-size: 100%;
+    
+}
+.active {
+    text-decoration: none;
+    color: red;
+  }
+  .default {
+    text-decoration: none;
+    color: black;
+  }
