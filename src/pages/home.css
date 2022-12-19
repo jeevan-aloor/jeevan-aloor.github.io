@@ -1,14 +1,16 @@
 .bckimage{
-    /* background-image: url('https://i.makeagif.com/media/8-22-2017/tFTl2R.gif'); */
-    background-color:#3F3C44;
-    background-size: 100%;
+    background-image: url('https://images.unsplash.com/photo-1624139283078-74a0492f2ee3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGFic3RyYWN0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+    /* background-color:#3F3C44; */
+    /* background-image: url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80 ); */
+    /* background-size: 100%; */
     
 }
-.active {
+/* https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80 */
+/* .active {
     text-decoration: none;
     color: red;
   }
   .default {
     text-decoration: none;
     color: black;
-  }
+  } */

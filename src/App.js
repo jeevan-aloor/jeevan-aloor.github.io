@@ -7,8 +7,8 @@ import PageRouter from './routerfolder/router';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <PageRouter/>
+      <Navbar />
+      {/* <PageRouter/> */}
     
     </div>
   );
