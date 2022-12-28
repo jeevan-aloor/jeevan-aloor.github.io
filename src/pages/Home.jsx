@@ -10,7 +10,7 @@ import Skills from "./Skills";
 import "./home.css";
 import Statics from "./statics";
 import background from "../background.jpeg";
-import resumejeevan from "../Jeevan-Aloor_Resume2022.pdf";
+import resumejeevan from "../Jeevan-Aloor-Resume.pdf";
 
 function Home({ home, skill, project, about, contact }) {
   const [isNotSmallerscreen] = useMediaQuery("(min-width:600px)");
