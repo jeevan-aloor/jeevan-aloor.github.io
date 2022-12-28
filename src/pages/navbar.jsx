@@ -95,19 +95,19 @@ function Navbar() {
 
             <MenuList>
               <MenuItem backgroundColor="black">
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/" onClick={() => scrollToScection(home)}>Home</NavLink>
+              </MenuItem>
+              <MenuItem backgroundColor="black" >
+                <NavLink onClick={() => scrollToScection(about)} to="/About" >About</NavLink>
               </MenuItem>
               <MenuItem backgroundColor="black">
-                <NavLink to="/About">About</NavLink>
+                <NavLink onClick={() => scrollToScection(project)}  to="/Project">Project</NavLink>
               </MenuItem>
               <MenuItem backgroundColor="black">
-                <NavLink to="/Project">Project</NavLink>
+                <NavLink onClick={() => scrollToScection(skill)} to="/Skills">Skills</NavLink>
               </MenuItem>
               <MenuItem backgroundColor="black">
-                <NavLink to="/Skills">Skills</NavLink>
-              </MenuItem>
-              <MenuItem backgroundColor="black">
-                <NavLink to="/Contact" >
+                <NavLink onClick={() => scrollToScection(contact)} to="/Contact" >
                   Contact
                 </NavLink>
               </MenuItem>
@@ -139,7 +139,7 @@ function Navbar() {
             </NavLink>
 
             <a
-              href="https://drive.google.com/file/d/1T8fMudc8bAckGnJliFxWQu_e4uzNL9s2/view?usp=sharing"
+              href="https://drive.google.com/file/d/1G691z86S9DXSQrLVZhtzZXP7FBmRrThm/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -37,14 +37,14 @@ function About({ about }) {
             h={{ base: "200px", sm: "250px", md: "350px" }}
             ml={{ md: "100px" }}
             name="Jeevan Aloor"
-            src="https://ca.slack-edge.com/T04F5RVNC2J-U04FUSM0552-4e6ac9ef9d7e-512"
+            src="https://ca.slack-edge.com/T04F5RVNC2J-U04FUSM0552-367143508c0d-512"
           />
         </Box>
         <Box
           w={{ md: "50%", base: "100%", sm: "100%" }}
           h={{ md: "450px", base: "430px", sm: "220px" }}
           mt="30px"
-          mr={{md:"40px"}}
+          mr={{ md: "40px" }}
           border="0.1px solid #E5F3F3"
           color="#E5F3F3"
           borderRadius="10px"

@@ -76,14 +76,28 @@ function Project({ project }) {
                 NETLIFY
               </Badge>
             </Stack>
-            <Box display="flex" flexDirection="row" w={{ md: "40%" , base:"30%" }} m={{md:"auto"}} ml={{base:"30px"}}>
+            <Box
+              display="flex"
+              flexDirection="row"
+              w={{ md: "40%", base: "30%" }}
+              m={{ md: "auto" }}
+              ml={{ base: "30px" }}
+            >
               <a
                 href="https://github.com/jeevan-aloor/lucky-stone-5708"
                 style={{ margin: "auto" }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Button background="#8C6A51" mr={{base:"20px"}}>GITHUB</Button>
+                <Button background="#8C6A51" mr={{ base: "20px" }}>
+                  GITHUB
+                </Button>
               </a>
-              <a href="https://golden-taffy-63dbf8.netlify.app">
+              <a
+                href="https://effulgent-biscotti-06a6fc.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button background="#8C6A51">LIVE DEMO</Button>
               </a>
             </Box>
@@ -139,14 +153,28 @@ function Project({ project }) {
                 NETLIFY
               </Badge>
             </Stack>
-            <Box display="flex" flexDirection="row" w={{ md: "40%" , base:"30%" }} m={{md:"auto"}} ml={{base:"30px"}}>
+            <Box
+              display="flex"
+              flexDirection="row"
+              w={{ md: "40%", base: "30%" }}
+              m={{ md: "auto" }}
+              ml={{ base: "30px" }}
+            >
               <a
-                href="https://golden-taffy-63dbf8.netlify.app"
+                href="https://github.com/jeevan-aloor/breezy-month-9750"
                 style={{ margin: "auto" }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Button background="#8C6A51" mr={{base:"20px"}}>GITHUB</Button>
+                <Button background="#8C6A51" mr={{ base: "20px" }}>
+                  GITHUB
+                </Button>
               </a>
-              <a href="https://golden-taffy-63dbf8.netlify.app">
+              <a
+                href="https://bespoke-queijadas-a45cea.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button background="#8C6A51">LIVE DEMO</Button>
               </a>
             </Box>
@@ -202,14 +230,28 @@ function Project({ project }) {
                 NETLIFY
               </Badge>
             </Stack>
-            <Box display="flex" flexDirection="row" w={{ md: "40%" , base:"30%" }} m={{md:"auto"}} ml={{base:"30px"}} >
+            <Box
+              display="flex"
+              flexDirection="row"
+              w={{ md: "40%", base: "30%" }}
+              m={{ md: "auto" }}
+              ml={{ base: "30px" }}
+            >
               <a
                 href="https://github.com/sahilkh07/boundless-sleep-6032"
                 style={{ margin: "auto" }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Button background="#8C6A51" mr={{base:"20px"}}>GITHUB</Button>
+                <Button background="#8C6A51" mr={{ base: "20px" }}>
+                  GITHUB
+                </Button>
               </a>
-              <a href="https://jovial-babka-946b54.netlify.app/">
+              <a
+                href="https://jovial-babka-946b54.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button background="#8C6A51">LIVE DEMO</Button>
               </a>
             </Box>
