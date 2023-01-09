@@ -1,10 +1,10 @@
-import { Box, Text, Image, Flex } from "@chakra-ui/react";
+import { Box, Text, Image, Flex, Input, Button, Heading } from "@chakra-ui/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Contact({ contact }) {
   return (
-    <Box h="450px" backgroundColor="#8da9c4" ref={contact}>
+    <Box h={{md:"750px",base:"800px"}} backgroundColor="#8da9c4" ref={contact}>
       <Text
         fontWeight="medium"
         fontFamily="unset"
@@ -65,6 +65,23 @@ function Contact({ contact }) {
           />
         </a>
       </Flex>
+      <Box mt="40px">
+      <form action="https://getform.io/f/554bdd97-b43d-43d8-8971-385c90130438" method="POST" style={{height:"300px",width:"300px", margin:"auto"}} >
+        <Heading mb="20px">Send messages</Heading>
+    <Input type="text" name="name" style={{border:"1px solid red",width:"100%"}} placeholder="enter name"  mb="20px"/><br/>
+    <Input type="email" name="email" placeholder="enter email" style={{border:"1px solid red",width:"100%"}} mb="20px" /><br/>
+    <Input type="text" name="message" placeholder="enter message" style={{border:"1px solid red",width:"100%"}} mb="20px" h="150px" /><br/>
+    {/* <!-- add hidden Honeypot input to prevent spams --> */}
+    <input type="hidden" name="_gotcha"  />
+    {/* <!-- checkbox handle --> */}
+   
+    {/* <!-- radio button handle --> */}
+   
+    {/* <!-- select field handle --> */}
+   
+    <Button type="submit" style={{width:"100%"}} color="white" background="black"  _hover={{color:"none"}}>Send</Button>
+</form>
+</Box>
     </Box>
   );
 }

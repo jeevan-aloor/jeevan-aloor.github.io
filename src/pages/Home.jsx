@@ -86,7 +86,7 @@ function Home({ home, skill, project, about, contact }) {
                 rel="noopener noreferrer"
                 download
               >
-                <button
+                <Button
                   style={{
                     background: "#649DD5",
                     padding: "10px",
@@ -94,7 +94,7 @@ function Home({ home, skill, project, about, contact }) {
                   }}
                 >
                   See my Resume
-                </button>
+                </Button>
               </a>
             </>
           ) : (

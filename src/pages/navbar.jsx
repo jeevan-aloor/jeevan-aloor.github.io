@@ -58,6 +58,7 @@ function Navbar() {
         m="auto"
         boxSizing="borderbox"
         position="fixed"
+        zIndex="100"
         justifyContent="space-between"
         backgroundColor={navbar ? "rgba(77, 181, 255, 1)" : "transperent"}
         color="white"
@@ -95,19 +96,33 @@ function Navbar() {
 
             <MenuList>
               <MenuItem backgroundColor="black">
-                <NavLink to="/" onClick={() => scrollToScection(home)}>Home</NavLink>
-              </MenuItem>
-              <MenuItem backgroundColor="black" >
-                <NavLink onClick={() => scrollToScection(about)} to="/About" >About</NavLink>
-              </MenuItem>
-              <MenuItem backgroundColor="black">
-                <NavLink onClick={() => scrollToScection(project)}  to="/Project">Project</NavLink>
+                <NavLink to="/" onClick={() => scrollToScection(home)}>
+                  Home
+                </NavLink>
               </MenuItem>
               <MenuItem backgroundColor="black">
-                <NavLink onClick={() => scrollToScection(skill)} to="/Skills">Skills</NavLink>
+                <NavLink onClick={() => scrollToScection(about)} to="/About">
+                  About
+                </NavLink>
               </MenuItem>
               <MenuItem backgroundColor="black">
-                <NavLink onClick={() => scrollToScection(contact)} to="/Contact" >
+                <NavLink
+                  onClick={() => scrollToScection(project)}
+                  to="/Project"
+                >
+                  Project
+                </NavLink>
+              </MenuItem>
+              <MenuItem backgroundColor="black">
+                <NavLink onClick={() => scrollToScection(skill)} to="/Skills">
+                  Skills
+                </NavLink>
+              </MenuItem>
+              <MenuItem backgroundColor="black">
+                <NavLink
+                  onClick={() => scrollToScection(contact)}
+                  to="/Contact"
+                >
                   Contact
                 </NavLink>
               </MenuItem>
@@ -122,24 +137,24 @@ function Navbar() {
             fontWeight="semibold"
           >
             <NavLink onClick={() => scrollToScection(home)} to="/">
-              <Text _hover={{color:"red"}}>Home</Text>
+              <Text _hover={{ color: "red" }}>Home</Text>
             </NavLink>
             <NavLink onClick={() => scrollToScection(about)} to="/About">
-              <Text _hover={{color:"red"}}>About</Text>
+              <Text _hover={{ color: "red" }}>About</Text>
             </NavLink>
             <NavLink onClick={() => scrollToScection(skill)} to="/Skills">
-              <Text _hover={{color:"red"}}>Skills</Text>
+              <Text _hover={{ color: "red" }}>Skills</Text>
             </NavLink>
             <NavLink onClick={() => scrollToScection(project)} to="/Project">
-              <Text _hover={{color:"red"}}>Project</Text>
+              <Text _hover={{ color: "red" }}>Project</Text>
             </NavLink>
-            
-            <NavLink onClick={() => scrollToScection(contact)} to="/Contact" >
-              <Text _hover={{color:"red"}}>Contact</Text>
+
+            <NavLink onClick={() => scrollToScection(contact)} to="/Contact">
+              <Text _hover={{ color: "red" }}>Contact</Text>
             </NavLink>
 
             <a
-              href="https://drive.google.com/file/d/1hCuMMMcBIIQZgFcMDI_P49nHYXlIr8Iv/view?usp=sharing"
+              href="https://drive.google.com/file/d/114GoGKtJ3H358Jph3M47daUwA90oNdiU/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

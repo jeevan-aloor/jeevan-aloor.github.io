@@ -33,7 +33,13 @@ function Statics() {
           h="200px"
         />
       </Box>
-      <Image src={calender} w="80%" m="auto" mt="50px" h="200px" />
+      <Image
+        src={calender}
+        w={{ md: "80%", base: "70%" }}
+        m="auto"
+        mt="50px"
+        h="200px"
+      />
     </Box>
   );
 }

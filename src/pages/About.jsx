@@ -37,6 +37,7 @@ function About({ about }) {
             h={{ base: "200px", sm: "250px", md: "350px" }}
             ml={{ md: "100px" }}
             name="Jeevan Aloor"
+            data-aos="fade-left"
             src="https://ca.slack-edge.com/T04F5RVNC2J-U04FUSM0552-367143508c0d-512"
           />
         </Box>
