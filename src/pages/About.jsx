@@ -11,18 +11,19 @@ function About({ about }) {
   return (
     <Box
       pt="60px"
-      h={{ base: "900px", md: "700px" }}
+      h={{ base: "900px", sm: "900px", md: "1100px", lg: "700px" }}
       // backgroundImage="#5A6168"
       backgroundColor="#0D0E0E"
       ref={about}
+
     >
       <Text fontSize="xxx-large" color="#E5F3F3">
         About Me
       </Text>
       <Box
         display="flex"
-        flexDirection={{ base: "column", sm: "column", md: "row" }}
-        m={{ base: "auto", sm: "auto" }}
+        flexDirection={{ base: "column", sm: "column", md: "column", lg: "row" }}
+        m={{ base: "auto", sm: "auto", md: "auto" }}
       >
         <Box
           w={{ md: "50%", base: "100%", sm: "100%" }}
@@ -42,8 +43,8 @@ function About({ about }) {
           />
         </Box>
         <Box
-          w={{ md: "50%", base: "100%", sm: "100%" }}
-          h={{ md: "450px", base: "430px", sm: "220px" }}
+          w={{ lg: "50%", md: "100%", base: "100%", sm: "100%" }}
+          h={{ lg: "450px", md: "400px", base: "430px", sm: "220px" }}
           mt="30px"
           mr={{ md: "40px" }}
           border="0.1px solid #E5F3F3"

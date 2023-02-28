@@ -10,7 +10,7 @@ import {
   MenuItem,
   IconButton,
   useMediaQuery,
-  Text,
+  Text, useDisclosure, Button, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Input, DrawerFooter
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { useState, useRef } from "react";
@@ -18,16 +18,35 @@ import Home from "./Home";
 import Skills from "./Skills";
 import { motion } from "framer-motion";
 import Aos from "aos";
+import resumejeevan from "../Jeevan-Aloor-Resume.pdf"
 
 function Navbar() {
   const [check, setCheck] = useState(false);
   const [isLesserThan800] = useMediaQuery("(max-width: 900px)");
   const [navbar, setNavbar] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
   let home = useRef(null);
   let about = useRef(null);
   let project = useRef(null);
   let contact = useRef(null);
   let skill = useRef(null);
+
+  function handleDownloadAndRedirect(event) {
+    event.preventDefault();
+    // Download file
+    const fileUrl = resumejeevan;
+    const fileName = "fp_05-Jeevan-Aloor-Resume";
+    const downloadLink = document.createElement('a');
+    // const downloadLink=document.getElementById("downloadRedirect")
+    downloadLink.href = fileUrl;
+    downloadLink.download = fileName;
+    downloadLink.click();
+
+    // Redirect to another link
+    const redirectUrl = 'https://drive.google.com/file/d/17B1udpoF-4WBn--1Hw_WTAXxJzGXfega/view?usp=sharing';
+    window.open(redirectUrl, "_blank");
+  }
 
   const handleChange = () => {
     if (window.scrollY >= 40) {
@@ -37,6 +56,7 @@ function Navbar() {
     }
   };
   window.addEventListener("scroll", handleChange);
+  
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -48,7 +68,7 @@ function Navbar() {
       duration: 5000,
     });
   };
-  console.log("contact", contact.current);
+
   return (
     <Box>
       <Box
@@ -64,6 +84,7 @@ function Navbar() {
         color="white"
         w={{ base: "100%", sm: "100%", md: "100%" }}
         mb="40px"
+      // pl="20px"
       >
         <motion.Box
           ml={{ md: "50px", sm: "20px" }}
@@ -77,57 +98,108 @@ function Navbar() {
             textShadow="1px"
             fontStyle="oblique"
             color={navbar ? "black" : "whitesmoke"}
+            fontWeight="semibold"
           >
-            JEEVAN ALOOR
+            ★彡ᴊᴇᴇᴠᴀɴ ᴀʟᴏᴏʀ彡★
+            {/* 𝕁𝔼𝔼𝕍𝔸ℕ 𝔸𝕃𝕆𝕆 ℝ */}
           </Text>
         </motion.Box>
         {isLesserThan800 ? (
-          <Menu border="none">
-            <MenuButton
-              border="none"
-              as={IconButton}
-              aria-label="Options"
-              icon={<HamburgerIcon />}
-              variant="outline"
-              w="80px"
-              h="50px"
-              mt="10px"
-            />
-
-            <MenuList>
-              <MenuItem backgroundColor="black">
-                <NavLink to="/" onClick={() => scrollToScection(home)}>
+          <>
+            {/* <Button ref={btnRef} colorScheme='teal' onClick={onOpen} background="black" mt="20px"  >
+          <HamburgerIcon />
+        </Button>
+        <Drawer
+          isOpen={isOpen}
+          placement='right'
+          onClose={onClose}
+          finalFocusRef={btnRef}
+        >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader>Create your account</DrawerHeader>
+  
+            <DrawerBody>
+            <NavLink to="/" onClick={() => scrollToScection(home)}>
                   Home
                 </NavLink>
-              </MenuItem>
-              <MenuItem backgroundColor="black">
                 <NavLink onClick={() => scrollToScection(about)} to="/About">
                   About
                 </NavLink>
-              </MenuItem>
-              <MenuItem backgroundColor="black">
                 <NavLink
                   onClick={() => scrollToScection(project)}
                   to="/Project"
                 >
                   Project
                 </NavLink>
-              </MenuItem>
-              <MenuItem backgroundColor="black">
                 <NavLink onClick={() => scrollToScection(skill)} to="/Skills">
                   Skills
                 </NavLink>
-              </MenuItem>
-              <MenuItem backgroundColor="black">
                 <NavLink
                   onClick={() => scrollToScection(contact)}
                   to="/Contact"
                 >
                   Contact
                 </NavLink>
-              </MenuItem>
-            </MenuList>
-          </Menu>
+              
+            </DrawerBody>
+  
+            <DrawerFooter>
+              <Button variant='outline' mr={3} onClick={onClose}>
+                Cancel
+              </Button>
+              <Button colorScheme='blue'>Save</Button>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer> */}
+            <Menu border="none">
+              <MenuButton
+                border="none"
+                as={IconButton}
+                aria-label="Options"
+                icon={<HamburgerIcon />}
+                variant="outline"
+                w="80px"
+                h="50px"
+                mt="10px"
+              />
+
+              <MenuList>
+                <MenuItem backgroundColor="black">
+                  <NavLink to="/" onClick={() => scrollToScection(home)}>
+                    Home
+                  </NavLink>
+                </MenuItem>
+                <MenuItem backgroundColor="black">
+                  <NavLink onClick={() => scrollToScection(about)} to="/About">
+                    About
+                  </NavLink>
+                </MenuItem>
+                <MenuItem backgroundColor="black">
+                  <NavLink
+                    onClick={() => scrollToScection(project)}
+                    to="/Project"
+                  >
+                    Project
+                  </NavLink>
+                </MenuItem>
+                <MenuItem backgroundColor="black">
+                  <NavLink onClick={() => scrollToScection(skill)} to="/Skills">
+                    Skills
+                  </NavLink>
+                </MenuItem>
+                <MenuItem backgroundColor="black">
+                  <NavLink
+                    onClick={() => scrollToScection(contact)}
+                    to="/Contact"
+                  >
+                    Contact
+                  </NavLink>
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </>
         ) : (
           <Flex
             justifyContent="space-around"
@@ -153,10 +225,8 @@ function Navbar() {
               <Text _hover={{ color: "red" }}>Contact</Text>
             </NavLink>
 
-            <a
-              href="https://drive.google.com/file/d/114GoGKtJ3H358Jph3M47daUwA90oNdiU/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a id="downloadRedirect"
+              onClick={handleDownloadAndRedirect}
             >
               Resume
             </a>

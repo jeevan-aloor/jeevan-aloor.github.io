@@ -10,11 +10,26 @@ import Skills from "./Skills";
 import "./home.css";
 import Statics from "./statics";
 import background from "../background.jpeg";
-import resumejeevan from "../Jeevan-Aloor-Resume.pdf";
+import resumejeevan from "../Jeevan-Aloor-Resume.pdf"
+import { ArrowDownIcon } from '@chakra-ui/icons'
 
 function Home({ home, skill, project, about, contact }) {
   const [isNotSmallerscreen] = useMediaQuery("(min-width:600px)");
   // const {home}=useContext(contextApi)
+  function handleDownloadAndRedirect(event) {
+    event.preventDefault();
+    // Download file
+    const fileUrl = resumejeevan;
+    const fileName = "fp_05-Jeevan-Aloor-Resume";
+    const downloadLink = document.createElement('a');
+    downloadLink.href = fileUrl;
+    downloadLink.download = fileName;
+    downloadLink.click();
+
+    // Redirect to another link
+    const redirectUrl = 'https://drive.google.com/file/d/17B1udpoF-4WBn--1Hw_WTAXxJzGXfega/view?usp=sharing';
+    window.open(redirectUrl, "_blank");
+  }
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -66,7 +81,7 @@ function Home({ home, skill, project, about, contact }) {
                 color="#FEEBC8"
                 fontWeight="bold"
                 textAlign="left"
-                ml="250px"
+                ml="100px"
               >
                 {" "}
                 <a
@@ -75,27 +90,31 @@ function Home({ home, skill, project, about, contact }) {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="https://readme-typing-svg.demolab.com?font=Bodoni&weight=1000&size=40&duration=3000&pause=800&color=D5DACF&center=false&width=435&lines=Web+Developer;Coder;Problem+Solver;Designer;Player"
+                    src="https://readme-typing-svg.demolab.com?font=Bodoni&weight=1000&size=40&duration=3000&pause=800&color=84d2f6&center=false&height=100&width=585&lines=Mern Stack Developer 😇;Countinuously Learning 🤩 ;Problem Solver 🧠;UI-UX Designer 🙌;"
                     alt="Typing SVG"
                   />
                 </a>
               </Text>
-              <a
-                href={resumejeevan}
+
+              {/* <a
+                href="resumejeevan https://drive.google.com/file/d/1-prGim-SSVI_3bg5uZnXP7-8SbIDLKbX/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
+              > */}
+              <Button
+                style={{
+                  background: "#649DD5",
+                  padding: "10px",
+                  borderRadius: "10px",
+                }}
+                onClick={handleDownloadAndRedirect}
               >
-                <Button
-                  style={{
-                    background: "#649DD5",
-                    padding: "10px",
-                    borderRadius: "10px",
-                  }}
-                >
-                  See my Resume
-                </Button>
-              </a>
+                See my Resume   <ArrowDownIcon />
+              </Button>
+              {/* </a> */}
+
+
             </>
           ) : (
             <Text ml="40px" fontSize="25px" color="white">
@@ -107,13 +126,13 @@ function Home({ home, skill, project, about, contact }) {
 
         <Box>
           {/* <Image
-            // src="https://media1.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"
-            // alt="coding"
+            src="https://img.freepik.com/free-vector/programmer-working-flat-style_52683-15040.jpg?w=740&t=st=1677522337~exp=1677522937~hmac=1ac198a2458ff9e826f36b784eac8859f25631144d313cd904485fa3bb531964"
+            alt="coding"
             h="60%"
             w="70%"
             m="auto"
             
-            borderRadius={{base:"40px 10px 60px",sm:"40px 10px 60px",md:"150px 20px 150px "}}
+            
             mt="100px"
             // border={{base:"none",md:"30px solid yellow"}}
             

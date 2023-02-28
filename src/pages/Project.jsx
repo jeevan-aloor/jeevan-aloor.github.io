@@ -17,7 +17,7 @@ function Project({ project }) {
   return (
     <Box
       ref={project}
-      h={{ base: "2100px", md: "1400px" }}
+      h={{ base: "2800px", md: "1800px" }}
       backgroundColor="#0D0E0E"
       mt="-30px"
     >
@@ -249,6 +249,87 @@ function Project({ project }) {
               </a>
               <a
                 href="https://jovial-babka-946b54.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button background="#8C6A51">LIVE DEMO</Button>
+              </a>
+            </Box>
+          </GridItem>
+        </GridItem>
+        <GridItem
+          w="80%"
+          h={{ base: "650px", md: "400px" }}
+          margin="auto"
+          display="flex"
+          flexDirection={{ base: "column", md: "row", sm: "column" }}
+        >
+          <GridItem
+            w={{ base: "100%", md: "40%" }}
+            h={{ base: "50%", md: "100%" }}
+          >
+            <Image
+              src="https://i.ibb.co/8jdvVL6/Wonder-Mart.png"
+              alt="gif"
+              h={{ base: "90%", md: "100%" }}
+              p={{ md: "40px" }}
+            />
+          </GridItem>
+          <GridItem
+            w={{ base: "100%", md: "60%" }}
+            h={{ base: "80%", md: "100%" }}
+          >
+            <Heading>WONDER MART</Heading>
+            <Text p={{ base: "10px", md: "30px" }}>
+              Wonder mart is a clone of Bigbasket and here we can buy daily
+              usefull product like it is a ecoomerce website,and here we can buy
+              like daily usefull products
+            </Text>
+            <Text fontWeight="bold" textDecor="underline" mb="10px">
+              I'm used to make this Website{" "}
+            </Text>
+            <Stack
+              direction="row"
+              justifyContent={{ base: "center", md: "center" }}
+              pl={{ base: "10px" }}
+              pr={{ base: "30px" }}
+              overflow="auto"
+            >
+              <Badge>HTML</Badge>
+              <Badge colorScheme="green">CSS</Badge>
+              <Badge colorScheme="red">JAVA SCRIPT</Badge>
+              {/* <Badge colorScheme="red">REACT</Badge>
+              <Badge colorScheme="red">CHAKRA UI</Badge>
+              <Badge colorScheme="red">MONGO DATABASE</Badge>
+              <Badge colorScheme="red">EXPRESS</Badge> */}
+            </Stack>
+            <Text mt="20px" mb="20px">
+              For deploy
+            </Text>
+            <Stack direction="row" justifyContent="center">
+              <Badge colorScheme="green" mb="20px">
+                NETLIFY
+              </Badge>
+            </Stack>
+            <Box
+              display="flex"
+              flexDirection="row"
+              w={{ md: "40%", base: "30%" }}
+              m={{ md: "auto" }}
+              ml={{ base: "30px" }}
+            >
+              <a
+                href="https://github.com/Surendrakumar878/dear-attack-7758"
+                style={{ margin: "auto" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button background="#8C6A51" mr={{ base: "20px" }}>
+                  GITHUB
+                </Button>
+              </a>
+              <a
+                href="https://wondermart.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
